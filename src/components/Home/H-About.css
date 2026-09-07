@@ -1,0 +1,178 @@
+.about-section {
+  margin-left: 210px;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 100px 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Image Wrapper Styling */
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.main-img-box {
+  width: 100%;
+  height: 480px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(196, 154, 69, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.main-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.main-img-box img:hover {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+/* Floating Experience Badge */
+.experience-badge {
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  background-color: #c49a45;
+  color: #ffffff;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.badge-number {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.badge-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Content Box Styling */
+.about-content-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-heading {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #c49a45;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.about-content-box h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.about-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #b0b0b0;
+  margin-bottom: 35px;
+}
+
+.about-features-grid {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 0;
+}
+
+.feat-card h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #c49a45;
+  margin-bottom: 5px;
+}
+
+.feat-card p {
+  font-size: 13px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Action Button */
+.explore-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #c49a45;
+  padding: 14px 32px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.explore-btn:hover {
+  background-color: #c49a45;
+  color: #121212;
+  box-shadow: 0 5px 20px rgba(196, 154, 69, 0.3);
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .about-section {
+    margin-left: 0;
+    padding: 60px 20px;
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .experience-badge {
+    right: 15px;
+    bottom: -20px;
+    padding: 15px 20px;
+  }
+
+  .about-content-box h2 {
+    font-size: 30px;
+  }
+}

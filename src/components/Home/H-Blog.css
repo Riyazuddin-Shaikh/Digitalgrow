@@ -1,0 +1,129 @@
+.blog-section {
+  margin-left: 210px;
+  width: calc(100% - 210px);
+  padding: 100px 5%;
+  background-color: #ffffff;
+  color: #111111;
+  box-sizing: border-box;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-header-box {
+  margin-bottom: 60px;
+}
+
+.blog-header-box .sub-heading {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: #777;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.blog-header-box h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.header-line {
+  width: 60px;
+  height: 2px;
+  background-color: #c5a880;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.blog-card {
+  background: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  border-color: #c5a880;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.blog-img-box {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.blog-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-img-box img {
+  transform: scale(1.05);
+}
+
+.blog-date {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
+}
+
+.blog-content-box {
+  padding: 30px;
+}
+
+.blog-cat-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #c5a880;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.blog-content-box h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.blog-content-box p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .blog-section {
+    margin-left: 0;
+    width: 100%;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-header-box h2 {
+    font-size: 2rem;
+  }
+}

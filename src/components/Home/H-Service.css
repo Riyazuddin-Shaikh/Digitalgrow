@@ -1,0 +1,140 @@
+.service-section {
+  margin-left: 220px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 100px 60px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.service-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.service-header-box {
+  text-align: left;
+  margin-bottom: 50px;
+  max-width: 700px;
+}
+
+.sub-heading {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #c49a45;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.service-header-box h2 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+
+.header-line {
+  width: 60px;
+  height: 3px;
+  background-color: #c49a45;
+  margin-top: 18px;
+}
+
+/* Services Grid - 6 Boxes (3 columns x 2 rows) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  border: 1px solid #eaeaea;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 154, 69, 0.4);
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.service-card:hover::before {
+  background-color: #c49a45;
+}
+
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-number {
+  font-size: 24px;
+  font-weight: 800;
+  color: #c49a45;
+  opacity: 0.9;
+  letter-spacing: -1px;
+}
+
+.card-line {
+  flex: 1;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-left: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .service-section {
+    margin-left: 0;
+    padding: 60px 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-header-box h2 {
+    font-size: 30px;
+  }
+}

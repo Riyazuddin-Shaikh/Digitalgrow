@@ -1,0 +1,156 @@
+.sidebar-wrapper {
+  width: 220px;
+  height: 100vh;
+  background-color: #c49a45; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-logo-box {
+  background-color: #ffffff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 20px;
+ 
+}
+
+.brand-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Real Logo Image Styling */
+.real-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sidebar-nav-group {
+  padding: 30px 0;
+  flex: 1;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-menu li {
+  position: relative;
+  padding: 10px 0 10px 35px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  opacity: 0.85;
+}
+
+/* Active Link Style with Left Side Indicator Line */
+.nav-menu li.active a {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.nav-menu li.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* Sidebar Footer / Phone Number Styling */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-phone {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phone-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+}
+
+.phone-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Responsive fix */
+@media (max-width: 992px) {
+  .sidebar-wrapper {
+    width: 100%;
+    height: 70px;
+    position: relative;
+  }
+  .sidebar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar-logo-box {
+    height: 70px;
+    width: 120px;
+  }
+  .sidebar-nav-group {
+    padding: 0 20px;
+  }
+  .nav-menu {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .nav-menu li {
+    padding: 0;
+  }
+  .nav-menu li.active::before {
+    display: none; 
+  }
+  .sidebar-footer {
+    display: none; /* Mobile view mein space bachane ke liye footer hide kiya hai, agar chahiye toh hata sakte hain */
+  }
+}
